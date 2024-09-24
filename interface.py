@@ -155,18 +155,8 @@ pred_dockq = []
 for idx, batch_graphs in enumerate(eval_loader):
     batch_scores = model.forward(batch_graphs)
     pred_dockq.extend(batch_scores.cpu().data.numpy().tolist())
-# print(pred_dockq)
 pred_dockq = [i[0] for i in pred_dockq]
-# model_list = [i.split('.')[0] for i in model_list]
 df = pd.DataFrame(list(zip(model_list, pred_dockq)), columns=['MODEL', 'PRED_DOCKQ'])
 df.to_csv(os.path.join(result_folder, 'result.csv'), index=False)
-# df.sort_values(by='PRED_DOCKQ', ascending=False, inplace=True)
-# df.loc[:, 'PRED_DOCKQ'] = df.loc[:, 'PRED_DOCKQ'].round(5)
-# df.to_csv(os.path.join(result_folder, 'Ranking.csv'), index=False)
-# print(f"Result is {os.path.join(result_folder, 'Ranking.csv')}")
 
 
-# if delete_tmp:
-#     print('DELETING ALL TEMPORARY FILES, ONLY KEEP FINAL RESULTS')
-#     rmtree(work_dir)
-#     print('DELETED ALL TEMPORARY FILE, ONLY KEEP FINAL RESULTS')

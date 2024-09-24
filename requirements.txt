@@ -1,0 +1,15 @@
+Bio==1.7.1
+biopython==1.84
+gudhi==3.10.1
+joblib==1.4.2
+numpy==2.1.1
+pandas==2.2.3
+pytorch_lightning==2.3.3
+scikit_learn==1.5.2
+scipy==1.14.1
+torch==2.1.0
+torch_geometric==2.6.0
+torch_scatter==2.1.2+pt21cu121
+torchmetrics==1.4.0.post0
+torchsort==0.1.9
+wandb==0.18.1
