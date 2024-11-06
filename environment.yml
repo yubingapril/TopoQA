@@ -157,4 +157,3 @@ dependencies:
       - wandb==0.17.5
       - yarl==1.9.4
       - zipp==3.19.2
-prefix: /home/bingqing/anaconda3/envs/voro
